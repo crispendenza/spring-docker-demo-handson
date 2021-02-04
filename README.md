@@ -6,10 +6,10 @@ OBS. be sure that you're outside the VPN or at least the VPN is properly configu
 First of all, we will need Docker Desktop and Git installed. If you're not sure if Docker are installed, type in terminal or CMD: <br>```docker -- version```. <br>If you're seeing nothing, please get docker here: https://docs.docker.com/get-docker/. Get Git here: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 
 Then with Docker installed and running, clone repository to you local machine<br>
-$ git clone https://github.com/crispendenza/spring-docker-demo-handson.git
+```$ git clone https://github.com/crispendenza/spring-docker-demo-handson.git```
 
 Then, with docker running, start's application with compose:<br>
-$ docker-compose up --build
+```$ docker-compose up --build```
 <br><br>
 
 The container will serve locally in 8089 port (localhost:8089) with REST SpringBoot API with the following methods:
