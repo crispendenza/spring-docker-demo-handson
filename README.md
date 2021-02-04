@@ -13,11 +13,13 @@ Then, with docker running, start's application with compose:<br>
 <br><br>
 
 The container will serve locally in 8089 port (localhost:8089) with REST SpringBoot API with the following methods:
-<br>
+<br><br>
 [POST]: /create
-[GET]: /view/{id}
-[GET]: /viewAll
 <br>
+[GET]: /view/{id}
+<br>
+[GET]: /viewAll
+<br><br>
 Message type is JSON. Consider to user POSTMAN. 
 Example to create a resource:
 <br>
