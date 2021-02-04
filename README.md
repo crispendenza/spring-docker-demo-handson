@@ -36,7 +36,3 @@ and
 <br><br>
 GET http://localhost:8089/view/1
 to see the JSON with information of register id #1
-<br><br><br><br>
-Tks
-<br><br>
-:wq
