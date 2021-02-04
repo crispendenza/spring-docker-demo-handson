@@ -1,0 +1,29 @@
+version: "3.7"
+services:
+  spring-service:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    networks:
+      - spring-mysql-network
+    ports:
+      - "8089:8089"
+    depends_on:
+      - mysql-service
+  mysql-service:
+    image: "mysql:5.6"
+    networks:
+      - spring-mysql-network
+    ports:
+      - "3306:3306"
+    command: --default-authentication-plugin=mysql_native_password
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: J6wqP7js5Yz4Tq
+      MYSQL_DATABASE: spring-demo-db
+      MYSQL_USER: santander
+      MYSQL_PASSWORD: J6wqP7js5Yz4Tq
+
+networks:
+  spring-mysql-network:
+    driver: bridge

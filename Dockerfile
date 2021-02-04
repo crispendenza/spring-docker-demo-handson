@@ -1,6 +1,16 @@
-FROM openjdk:15
-ADD target/spring-boot-docker-handson-0.0.1-SNAPSHOT.jar spring-boot-docker-handson-0.0.1-SNAPSHOT.jar
-EXPOSE 8089
-ENTRYPOINT ["java", "-jar", "spring-boot-docker-handson-0.0.1-SNAPSHOT.jar"]
+FROM maven:3-openjdk-15 AS builder
+WORKDIR /app
+COPY pom.xml .
+RUN mvn dependency:go-offline -B
+COPY src src
+RUN mvn clean package -DskipTests
 
-#FROM mysql:5.6 as mysql-stand
+# PROD stage
+FROM openjdk:15
+ARG BUILD_DIR=/app/target
+COPY --from=builder ${BUILD_DIR} /app
+EXPOSE 8089
+WORKDIR /app
+ENTRYPOINT ["java","-jar", "spring-docker-handson-0.0.1-SNAPSHOT.jar"]
+
+

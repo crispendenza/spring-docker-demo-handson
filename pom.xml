@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.santander.bigdata</groupId>
-	<artifactId>spring-boot-docker-handson</artifactId>
+	<artifactId>spring-docker-handson</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-boot-docker-handson</name>
 	<description>Hands On with Spring Boot and Docker</description>
