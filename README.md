@@ -6,5 +6,5 @@ $ git clone https://github.com/crispendenza/spring-docker-demo-handson.git
 
 Then, with docker running, start's application with compose:<br>
 $ docker-compose up -d 
-<br>
+<br><br>
 Voilá
