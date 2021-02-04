@@ -20,7 +20,7 @@ The container will serve locally in 8089 port (localhost:8089) with REST SpringB
 <br>
 [GET]: /viewAll
 <br><br>
-Message type is JSON. Consider to user POSTMAN. 
+Message type is JSON. Consider to use POSTMAN. 
 Example to create a resource:
 <br>
 [POST] http://localhost:8089/create
